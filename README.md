@@ -1,2 +1,3 @@
-# services-monorepo
-one repo to rule 'em all 😎
+# Services Monorepo
+
+This service includes FDL services configuration, such as Docker Compose or Nginx configs.
