@@ -7,6 +7,5 @@ services:
       - 8001:8000
   server_stats:
     image: fdl-mc/api/users
-    command: uvicorn users_microservice.main:app --host 0.0.0.0 --proxy-headers
     ports:
       - 8002:8000
