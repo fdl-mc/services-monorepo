@@ -1,11 +1,17 @@
 version: '3.5'
 
 services:
-  server_stats:
-    image: fdl-mc/api/servers_stats
+  db:
+    image: postgres
+    restart: always
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
     ports:
-      - 8001:8000
-  server_stats:
-    image: fdl-mc/api/users
-    ports:
-      - 8002:8000
+      - 8000:5432
+    environment:
+      - POSTGRES_DB=fdl
+
+networks:
+  fdl-api: 
+    external:
+      name: fdl-api
