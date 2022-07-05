@@ -10,6 +10,8 @@ services:
       - 8000:5432
     environment:
       - POSTGRES_DB=fdl
+    networks:
+      - fdl-api
 
 networks:
   fdl-api: 
