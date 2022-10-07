@@ -1,0 +1,5 @@
+api.fdl-mc.ru {
+  reverse_proxy /api.users.v1* h2c://localhost:8010
+  reverse_proxy /grpc.reflection.v1alpha* h2c://localhost:8020
+  reverse_proxy /api.economy.v1* h2c://localhost:8030
+}
